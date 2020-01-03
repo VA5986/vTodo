@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "VA/WishlistSchema.json",
+  "title": "Wishlist Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties":{
+      "title": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "priority": {
+        "type": "number"
+      }
+    },
+    "required": ["title"],
+    "additionalProperties": false
+  },
+  "minItems": 1
+}

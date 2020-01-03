@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "VA/TODOSchema.json",
+  "title": "Log Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "occured": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "description": {
+        "type": "string"
+      },
+      "priority": {
+        "type": "number"
+      }
+    },
+    "required": ["title", "occured"],
+    "additionalProperties": false
+  },
+  "minItems": 1
+}

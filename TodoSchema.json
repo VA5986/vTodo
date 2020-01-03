@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "VA/TODOSchema.json",
+  "title": "Todo List Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties":{
+      "title": {
+        "type": "string"
+      },
+      "due": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "description": {
+        "type": "string"
+      },
+      "priority": {
+        "type": "number"
+      },
+      "done": {
+        "type": "boolean"
+      },
+      "setArarm": {
+        "type": "object",
+        "properties":{
+          "time":{
+            "type": "string",
+            "format": "date-time"
+          },
+          "frequence": {
+            "type": "integer",
+            "min": 0
+          }
+        }
+      }
+    },
+    "required": ["title", "due", "description", "done"],
+    "additionalProperties": false
+  },
+  "minItems": 1
+}
